@@ -1,7 +1,3 @@
-Below is an updated Product Development Specification Document that now includes support for optional expiration dates for shortened URLs.
-
----
-
 # URL Shortener Service  
 **Product Development Specification Document**
 
@@ -233,36 +229,6 @@ The system is built using a modular architecture for maintainability and scalabi
   - Use Jest to test individual modules including URL logic (with expiration validation), authentication, and subscription management.
 - **Integration Testing:**  
   - Validate API endpoints using Supertest to ensure end-to-end functionality, especially around expiration behavior.
-- **Continuous Integration:**  
-  - Set up CI pipelines to run automated tests on every commit and pull request.
-
----
-
-## 10. Deployment & DevOps
-
-- **Containerization:**  
-  - Build a Dockerfile for the NestJS application and use Docker Compose for orchestrating services (database, Redis).
-- **Environment Variables:**  
-  - Securely manage configuration details via environment variables.
-- **Deployment Options:**  
-  - Deploy on cloud platforms (Heroku, AWS, DigitalOcean) with CI/CD pipelines for streamlined deployments.
-- **Monitoring & Logging:**  
-  - Integrate Prometheus and Grafana for real-time monitoring and use centralized logging for production troubleshooting.
-
----
-
-## 11. Future Enhancements
-
-- **Custom Domain Support:**  
-  - Enable users to use their own domains for shortened URLs.
-- **QR Code Generation:**  
-  - Automatically generate QR codes for each shortened URL.
-- **Advanced Analytics:**  
-  - Offer enhanced visualization such as heatmaps and geographic data analytics.
-- **User Dashboard:**  
-  - Provide a comprehensive front-end for managing URLs, subscriptions, and viewing detailed analytics.
-- **Additional Expiration Options:**  
-  - Introduce more flexible expiration settings such as temporary access windows or auto-renewal options for premium users.
 
 ---
 
@@ -276,22 +242,5 @@ A high-level timeline includes:
 - **Phase 5:** Deployment & Monitoring Setup  
 - **Phase 6:** Beta Launch and Iterative Feedback  
 - **Phase 7:** Final Release and Documentation Handoff
-
----
-
-## 13. Risks & Mitigations
-
-- **Scalability Concerns:**  
-  - Mitigation: Leverage containerization and cloud scaling solutions.
-- **Security Vulnerabilities:**  
-  - Mitigation: Implement best practices in encryption, input validation, and JWT-based authentication.
-- **Subscription Management Complexity:**  
-  - Mitigation: Thoroughly test subscription flows and authorization logic.
-- **Expiration Management:**  
-  - Mitigation: Ensure robust validation and periodic cleanup processes to handle expired URLs without impacting system performance.
-
----
-
-This updated document outlines the comprehensive vision and technical specifications for the URL Shortener Service, now enhanced with optional expiration dates for shortened URLs. Please review and provide feedback or additional requirements as needed before development begins.
 
 ---
